@@ -20,8 +20,9 @@ try:
         rating = movies.find('td', class_="ratingColumn imdbRating").strong.text
         print(rank,name,year,rating)
         sheet.append([rank,name,year,rating])
-except Exception as e:
+  except Exception as e:
     print(e)
+
 #code to save excel file
 newExcelFile.save("IDMB Rating 2022.xlsx")
 
